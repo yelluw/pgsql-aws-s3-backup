@@ -1,6 +1,7 @@
 # local dev settings
 script.log
 backup-*.sql
+sql/
 
 
 # Byte-compiled / optimized / DLL files
