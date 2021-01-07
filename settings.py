@@ -1,3 +1,4 @@
+from pathlib import Path
 import logging
 import logging.config
 import environ
@@ -8,6 +9,13 @@ env = environ.Env(
 )
 
 environ.Env.read_env()
+
+
+BASE_DIR = Path(__file__).resolve().parent
+
+# Path where the output directory is located
+SQL_DIR = Path(env('SQL_DIR'))
+
 
 PG_HOST = env('PG_HOST')
 PG_PORT = env('PG_PORT')
@@ -32,7 +40,7 @@ LOGGING = logging.config.dictConfig({
             'formatter': 'verbose'
         },
         'rotating_log_file': {
-            'level':'DEBUG',
+            'level':'INFO',
             'class':'logging.handlers.RotatingFileHandler',
             'filename' : 'script.log',
             'maxBytes' : 1024*1024*2, # 2MB
