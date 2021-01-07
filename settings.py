@@ -4,19 +4,16 @@ import logging.config
 import environ
 
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
-
+env = environ.Env()
 environ.Env.read_env()
 
-
-BASE_DIR = Path(__file__).resolve().parent
+# aws
+AWS_S3_BUCKET_NAME = env('AWS_S3_BUCKET_NAME')
 
 # Path where the output directory is located
 SQL_DIR = Path(env('SQL_DIR'))
 
-
+# postgreSQL settings
 PG_HOST = env('PG_HOST')
 PG_PORT = env('PG_PORT')
 PG_USER = env('PG_USER')
