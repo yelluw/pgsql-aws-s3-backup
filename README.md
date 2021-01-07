@@ -7,9 +7,11 @@ Utility to backup a postgresql db and upload it to aws s3
 `python3 -m venv .venv`
 
 On POSIX:
-    source .venv/bin/activate
+    
+		source .venv/bin/activate
 
 On Windows:
+
     This has not been tested on windows at all. Feeling lucky?
 
 `pip install -r requirements.txt`
