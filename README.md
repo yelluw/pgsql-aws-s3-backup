@@ -8,7 +8,18 @@ However, it could be easily be modified to do so.
 Feel free to fork and modify to your needs.
 
 
+# Requirements
+
+`Python 3.6+    # This was developed on 3.9`
+`PostgreSQL 9+  # This was developed with 13.`
+`Amazon AWS account with access keys`
+
+
 # Install
+
+Download latest release to wherever you want to run it from. 
+
+Latest release: [BETA](https://github.com/yelluw/pgsql-aws-s3-backup/releases/tag/BETA)
 
 `python3 -m venv .venv`
 
@@ -22,9 +33,18 @@ On Windows:
 
 `pip install -r requirements.txt`
 
- 
+From whtever directory you downloaded it to: Run `python3 main.py`
 
-# Required
+
+#### Helpful advice
+
+- You should run this through your cron tab.
+- I did not include a bash script on purpose.
+- Do not blindly trust automated backups. Always test them.
+- Call your mother.
+
+
+# Required Items
 
 - AWS credentials
 - An S3 with correct ACL (this script does not modify ACL)
