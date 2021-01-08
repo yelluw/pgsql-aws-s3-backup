@@ -1,4 +1,7 @@
 # pgsql-aws-s3-backup
+
+[Latest Release](https://github.com/yelluw/pgsql-aws-s3-backup/releases/latest)
+
 Utility to backup a postgresql db and upload it to aws s3.
 
 This is not meant to work with any other databases.
