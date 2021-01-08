@@ -8,22 +8,35 @@ This is not meant to work with any other databases.
 
 However, it could be easily be modified to do so.
 
-Feel free to fork and modify to your needs.
+Feel free to fork and modify to your needs. Just make sure to change the name to fit your database 😎
+
+
+# Requirements
+
+`Python 3.6+    # This was developed on 3.9`
+
+`PostgreSQL 9+  # This was developed with 13`
+
+`Amazon AWS account with access keys`
 
 
 # Install
 
 It is strongly recommended that you install it on a virtual environment
 
+Download latest release to wherever you want to run it from. 
+
+
 `python3 -m venv .venv`
 
 On Linux/OSX:
 
-		source .venv/bin/activate
+source .venv/bin/activate
 
 On Windows:
 
-    This has not been tested on windows at all. Feeling lucky?
+	This has not been tested on windows at all. Feeling lucky?
+
 
 `pip install -r requirements.txt`
 
@@ -41,7 +54,18 @@ This is how *I* have it setup on my crontab:
 
 [This](https://crontab.guru/) is a good utility to help you figure out your crontab setup.
 
-# Required
+From whatever directory you downloaded it to: Run `python3 main.py`
+
+
+#### Helpful advice
+
+- You should run this through your cron tab.
+- I did not include a bash script on purpose.
+- Do not blindly trust automated backups. Always test them.
+- Call your mother.
+
+
+# Required Items
 
 - AWS credentials
 - An S3 with correct ACL (this script does not modify ACL)
