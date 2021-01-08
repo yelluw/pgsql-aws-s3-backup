@@ -31,7 +31,7 @@ Download latest release to wherever you want to run it from.
 
 On Linux/OSX:
 
-source .venv/bin/activate
+`source .venv/bin/activate`
 
 On Windows:
 
