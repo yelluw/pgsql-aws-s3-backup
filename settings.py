@@ -13,6 +13,9 @@ AWS_S3_BUCKET_NAME = env('AWS_S3_BUCKET_NAME')
 # Path where the output directory is located
 SQL_DIR = Path(env('SQL_DIR'))
 
+# Path where the logfile will be created
+LOG_DIR = Path(env('LOG_DIR'))
+
 # postgreSQL settings
 PG_HOST = env('PG_HOST')
 PG_PORT = env('PG_PORT')
@@ -32,22 +35,23 @@ LOGGING = logging.config.dictConfig({
     },
     'handlers': {
         'console':{
-            'level':'DEBUG',
+            'level': env.str('DEBUG_LEVEL', 'DEBUG'),
             'class':'logging.StreamHandler',
             'formatter': 'verbose'
         },
         'rotating_log_file': {
-            'level':'INFO',
+            'level': env.str('DEBUG_LEVEL', 'DEBUG'),
             'class':'logging.handlers.RotatingFileHandler',
-            'filename' : 'script.log',
-            'maxBytes' : 1024*1024*2, # 2MB
-            'backupCount' : 10,
+            'formatter': 'verbose',
+            'filename' : env('LOG_DIR'),
+            'maxBytes' : env.int('MAX_BYTES', 2097152), # default 2MB (1024*1024*2)
+            'backupCount' : env.int('BACKUP_COUNT', 10) # default 10 files
         }
     },
     'loggers': {
         '*': {
-            'handlers': ['console'], #, 'rotating_log_file'],
-            'level': 'DEBUG'
+            'handlers': ['console', 'rotating_log_file'],
+            'level': env.str('DEBUG_LEVEL', 'DEBUG')
         }
     }
 })

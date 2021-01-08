@@ -2,6 +2,7 @@
 script.log
 backup-*.sql
 sql/
+log/
 
 
 # Byte-compiled / optimized / DLL files
