@@ -11,7 +11,9 @@ Feel free to fork and modify to your needs.
 # Requirements
 
 `Python 3.6+    # This was developed on 3.9`
-`PostgreSQL 9+  # This was developed with 13.`
+
+`PostgreSQL 9+  # This was developed with 13`
+
 `Amazon AWS account with access keys`
 
 
@@ -25,15 +27,17 @@ Latest release: [BETA](https://github.com/yelluw/pgsql-aws-s3-backup/releases/ta
 
 On Linux/OSX:
 
-		source .venv/bin/activate
+source .venv/bin/activate
 
 On Windows:
 
-    This has not been tested on windows at all. Feeling lucky?
+	This has not been tested on windows at all. Feeling lucky?
+
 
 `pip install -r requirements.txt`
 
-From whtever directory you downloaded it to: Run `python3 main.py`
+
+From whatever directory you downloaded it to: Run `python3 main.py`
 
 
 #### Helpful advice
