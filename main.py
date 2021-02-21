@@ -6,5 +6,5 @@ def main():
 
 
 if __name__ == '__main__':
-    backup_db()
+    main()
         
