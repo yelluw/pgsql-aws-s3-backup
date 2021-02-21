@@ -21,5 +21,7 @@ def backup_db():
     success = upload_to_bucket(str(FILE_PATH), FILENAME)
     if not success:
         logger.error('Uploading the file to AWS S3 failed.')
+        return success
+
     logger.info('Backup file uploaded successfully to aws s3')
     return success
